@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Decknight Software</title>
+    <style>
+        :root {
+            --color-bg: #fafafa;
+            --color-fg: #333;
+        }
+
+        body {
+            font-family: monospace;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            color: var(--color-fg);
+            background-color: var(--color-bg);
+        }
+
+        a {
+            olor: #345678;
+        }
+
+        .dark {
+            --color-fg: #fafafa;
+            --color-bg: #333;
+        }
+
+        .dark a {
+            color: #6c92b8;
+        }
+
+        h2 {margin-bottom: 0.5rem;}
+    </style>
+
+    <script>
+        function updateDarkMode() {
+            console.log('updating dark mode');
+
+            document.body.classList.remove('dark');
+
+            if (document.getElementById('dark-mode-selector').checked) {
+                document.body.classList.add('dark');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateDarkMode();
+        });
+    </script>
+</head>
+
+<body class="" style="max-width: 80ch; margin-left: auto; margin-right: auto;">
+    
+    <header style="display: flex;">
+        <h1 style="flex-grow: 1">Decknight Software</h1>
+        <label for="dark-mode-selector"><input id="dark-mode-selector" type="checkbox" onclick="updateDarkMode();">Dark Mode</label>
+    </header>
+
+    <main style="flex-grow: 1; max-width: 80ch;">
+        <div style="margin-top: 1.5rem;"></div>
+        <!--
+            <div style="margin-top: 1.5rem;">Decknight Software is a team of developers dedicated to providing business solutions using the Microsoft stack of technologies.</div>
+        -->
+        <div style="margin-top: 1.5rem;">
+            <h2>Don't let this plain looking website fool you!</h2>
+            We create our applications with the latest development strategies and patterns, constantly listening for new events in the ecosystem
+            and mediating the right solution for your needs.
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>Web Applications</h2>
+            We specialize in building web applications, but we've done it all. We've build backend systems with no user interface to 3D game models.
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>On-Prem or Cloud</h2>
+            Do you want your applications to be hosted in the cloud? We can do that! Prefer self-hosting? We've done plenty of that!
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>Migrate Data</h2>
+            Need to migrate data from one database to another? Do you have ETL processes you need created or improved? We've got you fully covered.
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>Agility Defined</h2>
+            We cover the entire life-cycle of your development needs, from project kickoff to ongoing support.
+            We prefer to meet with you on a semi-regular basis (weekly or bi-weekly) to show you our progress and ensure
+            your needs are being met.
+        </div>
+    </main>
+
+    <footer style="display: flex; flex-direction: row; align-items: center; padding-bottom: 0.5rem;">
+        <h3>Contact Us</h3>
+        <div style="margin-left: 1rem;"><a href="mailto:info@decknightsoftware.com">info@decknightsoftware.com</a></div>
+    </footer>
+
+</body>
+
+</html>
