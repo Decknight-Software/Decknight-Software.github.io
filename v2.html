@@ -1,51 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decknight Software - Oklahoma City</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Open Sans',sans-serif;color:#333}h1,h2,h3,h4,h5,h6{font-family:'Roboto Condensed',sans-serif}.hero-section{background-color:#345678;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:33vh;max-height:50vh;width:100%;text-align:center}.hero-section h1{font-size:3rem;color:#fff;margin-bottom:1.25rem}.subheadline{color:#e7e7e7;font-size:1.3rem;}main{margin:0 1rem}.benefits{display:grid;grid-template-columns:1fr;gap:1.25rem;max-width:120ch;margin:0 auto;padding:3.125rem 0}.benefit{text-align:left;max-width:40ch}.benefit h3{font-size:1.5rem;margin-bottom:.625rem;text-align:center}.contact{text-align:center;padding:3.125rem 0}@media (min-width:48.1rem){.benefits{grid-template-columns:repeat(3,1fr)}.hero-section h1{font-size:4rem}}
-</style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto Condensed', sans-serif
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 33vh;
+            max-height: 50vh;
+            width: 100%;
+            text-align: center
+        }
+
+        .hero-section img {
+            width: 95%;
+            max-width: 750px;
+        }
+
+        .hero-section .headings {
+            background-color: #345678;
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 1.25rem
+        }
+
+        .subheadline {
+            color: #e7e7e7;
+            font-size: 1.3rem;
+        }
+
+        main {
+            margin: 0 1rem
+        }
+
+        section {
+            text-align: center;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            max-width: 120ch;
+            margin: 0 auto;
+            padding: 3.125rem 0;
+        }
+
+        h2 + .benefits {
+            padding: 1rem 0;
+        }
+
+        .benefit {
+            text-align: center;
+            max-width: 40ch;
+            margin: 0 auto;
+        }
+
+        main h2 {
+            color: #345678;
+            font-size: 2.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .benefit h3 {
+            font-size: 1.5rem;
+            margin-bottom: .625rem;
+            text-align: center
+        }
+
+        .contact {
+            text-align: center;
+            padding: 3.125rem 0
+        }
+
+        @media (min-width: 600px) {
+            .benefits {
+                grid-template-columns: repeat(2, 1fr);
+                margin: auto;
+            }
+
+            .hero-section h1 {
+                font-size: 4rem
+            }
+        }
+
+        @media (min-width: 950px) {
+            .benefits {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
 </head>
+
 <body>
+
     <header class="hero-section">
-        <img src="data:image/png;base64,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" alt="Decknight Software" width="100" height="100">
+        <img src="dns-logo.png"
+            alt="Decknight Software">
+            <section class="headings">
         <h1>Unleash Your Business</h1>
         <p class="subheadline">Software Solutions for Modern Companies</p>
+    </section>
     </header>
     <main>
         <section class="benefits">
             <div class="benefit">
-                <h3>Experienced Team</h3>
-                <p>Our founders have a combined experience of 43 years, ensuring top-quality software solutions for your business needs.</p>
+                <h3>Experienced and Dedicated Team</h3>
+                <p>Our founders have a combined experience of 43 years, ensuring top-quality software solutions for your
+                    business needs.</p>
             </div>
             <div class="benefit">
-                <h3>Expertise in C# & Data Structures</h3>
-                <p>We specialize in C# applications with complex data structures, database design, and data integrations.</p>
+                <h3>Cutting-Edge Technology</h3>
+                <p>We stay up-to-date with the latest technology trends to provide you with innovative and future-ready
+                    software solutions.</p>
             </div>
             <div class="benefit">
-                <h3>Scalable Applications</h3>
-                <p>We develop highly scalable applications that grow with your business, ensuring long-term success.</p>
+                <h3>Modern and Secure Application Architecture</h3>
+                <p>Our team is skilled in modern application architecture, delivering state-of-the-art and secure
+                    software solutions.</p>
             </div>
             <div class="benefit">
-                <h3>Modern Application Architecture</h3>
-                <p>Our team is skilled in modern application architecture, delivering state-of-the-art software solutions.</p>
+                <h3>Comprehensive Data Integration Solutions</h3>
+                <p>Our team specializes in connecting various data sources, streamlining data flow between systems, and
+                    ensuring seamless integration for enhanced business efficiency.</p>
             </div>
             <div class="benefit">
-                <h3>Frontend Excellence</h3>
-                <p>Our excellent front-end developers create visually appealing sites using modern JavaScript frameworks like React and Vue.</p>
+                <h3>Exceptional User Experience Design</h3>
+                <p>We prioritize user experience, creating intuitive and user-friendly interfaces for your applications.
+                </p>
             </div>
             <div class="benefit">
-                <h3>Complete Project Management</h3>
-                <p>In addition to software development, we provide project management services to ensure seamless execution and delivery.</p>
+                <h3>Cloud Development and Architecture</h3>
+                <p>Our team excels in designing and implementing cloud-based solutions, ensuring efficient, secure, and
+                    flexible software to support your business growth.</p>
+            </div>
+        </section>
+        <h2>Included Services</h2>
+        <section class="benefits other">
+            <div class="benefit">
+                <h3>Comprehensive Project Management</h3>
+                <p>In addition to software development, we provide project management services to ensure seamless
+                    execution and delivery.</p>
+            </div>
+            <div class="benefit">
+                <h3>Agile Development Process</h3>
+                <p>We follow an Agile development process, allowing for flexibility, collaboration, and continuous
+                    improvement.</p>
+            </div>
+            <div class="benefit">
+                <h3>Quality Assurance and Testing</h3>
+                <p>We conduct thorough testing to guarantee high-quality software, meeting the most stringent standards
+                    for your business.</p>
             </div>
         </section>
         <section class="contact">
             <h2>Contact Us</h2>
-            <p>Ready to get started on your next project? Drop us an email at <a href="mailto:sales@decknightsoftware.com">sales@decknightsoftware.com</a></p>
+            <p>Ready to get started on your next project? Drop us an email at <a
+                    href="mailto:sales@decknightsoftware.com">sales@decknightsoftware.com</a></p>
         </section>
     </main>
 </body>
+
 </html>
