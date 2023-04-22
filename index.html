@@ -1,119 +1,84 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <title>Decknight Software</title>
-    <link rel="shortcut icon" type="type/x-icon" href="favicon.ico" />
-    <link rel="icon" type="type/x-icon" href="favicon.ico" />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decknight Software - Oklahoma City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
-        :root {
-            --color-bg: #fafafa;
-            --color-fg: #333;
-        }
-
-        body {
-            font-family: monospace;
-            height: 100vh;
-			max-width: 80ch;
-            margin: 0 auto;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            color: var(--color-fg);
-            background-color: var(--color-bg);
-        }
-
-        header {
-            display: flex;
-            margin-top: 1rem;
-        }
-
-        main {
-            flex-grow: 1;
-            max-width: 80ch;
-        }
-
-        footer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding-bottom: 0.5rem;
-        }
-
-        a {
-            color: #345678;
-        }
-
-        .dark {
-            --color-fg: #fafafa;
-            --color-bg: #333;
-        }
-
-        .dark a {
-            color: #6c92b8;
-        }
-
-        h2 {margin-bottom: 0.5rem;}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Open Sans',sans-serif;color:#333}h1,h2,h3,h4,h5,h6{font-family:'Roboto Condensed',sans-serif}.hero-section{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:33vh;max-height:50vh;width:100%;text-align:center}.hero-section img{width:95%;max-width:750px}.hero-section .headings{background-color:#345678;width:100%;padding:2rem 1rem}.hero-section h1{font-size:2.5rem;color:#fff;margin-bottom:1.25rem}.subheadline{color:#e7e7e7;font-size:1.3rem}main{margin:0 1rem}section{text-align:center}.benefits{display:grid;grid-template-columns:1fr;gap:1.25rem;max-width:120ch;margin:0 auto;padding:3.125rem 0}h2+.benefits{padding:1rem 0}.benefit{text-align:center;max-width:40ch;margin:0 auto}main h2{color:#345678;font-size:2.5rem;text-align:center;width:100%}.benefit h3{font-size:1.5rem;margin-bottom:.625rem;text-align:center}.contact{text-align:center;padding:3.125rem 0}@media (min-width:600px){.benefits{grid-template-columns:repeat(2,1fr);margin:auto}.hero-section h1{font-size:4rem}}@media (min-width:950px){.benefits{grid-template-columns:repeat(3,1fr)}}
     </style>
-
-    <script>
-        function updateDarkMode() {
-            console.log('updating dark mode');
-
-            document.body.classList.remove('dark');
-
-            if (document.getElementById('dark-mode-selector').checked) {
-                document.body.classList.add('dark');
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            updateDarkMode();
-        });
-    </script>
 </head>
 
 <body>
-    
-    <header>
-		<svg version="1.1" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-			<rect fill="#123456" x="0" y="0" width="100%" height="100%" />
-			<text x="32" y="42" text-anchor="middle" style="fill: white; font-size: 23pt; font-family: Consolas, fixed;">{DN}</text>
-		</svg>
-        <h1 style="margin-left: 1rem; flex-grow: 1">Decknight Software</h1>
-        <label for="dark-mode-selector"><input id="dark-mode-selector" type="checkbox" onclick="updateDarkMode();" checked="checked">Dark Mode</label>
+
+    <header class="hero-section">
+        <img src="dns-logo.png"
+            alt="Decknight Software">
+            <section class="headings">
+        <h1>Unleash Your Business</h1>
+        <p class="subheadline">Software Solutions for Modern Companies</p>
+    </section>
     </header>
-
     <main>
-        <div style="margin-top: 1.5rem;">
-            <h2>Don't let this plain looking website fool you!</h2>
-            We create our applications with the latest development strategies and patterns, constantly listening for new events in the ecosystem
-            and mediating the right solution for your needs.
-        </div>
-        <div style="margin-top: 1.5rem;">
-            <h2>Web Applications</h2>
-            We specialize in building web applications, but we've done it all. We've build backend systems with no user interface to 3D game models.
-        </div>
-        <div style="margin-top: 1.5rem;">
-            <h2>On-Prem or Cloud</h2>
-            Do you want your applications to be hosted in the cloud? We can do that! Prefer self-hosting? We've done plenty of that!
-        </div>
-        <div style="margin-top: 1.5rem;">
-            <h2>Migrate Data</h2>
-            Need to migrate data from one database to another? Do you have ETL processes you need created or improved? We've got you fully covered.
-        </div>
-        <div style="margin-top: 1.5rem;">
-            <h2>Agility Defined</h2>
-            We cover the entire life-cycle of your development needs, from project kickoff to ongoing support.
-            We prefer to meet with you on a semi-regular basis (weekly or bi-weekly) to show you our progress and ensure
-            your needs are being met.
-        </div>
+        <section class="benefits">
+            <div class="benefit">
+                <h3>Experienced and Dedicated Team</h3>
+                <p>Our founders have a combined experience of 43 years, ensuring top-quality software solutions for your
+                    business needs.</p>
+            </div>
+            <div class="benefit">
+                <h3>Cutting-Edge Technology</h3>
+                <p>We stay up-to-date with the latest technology trends to provide you with innovative and future-ready
+                    software solutions.</p>
+            </div>
+            <div class="benefit">
+                <h3>Modern and Secure Application Architecture</h3>
+                <p>Our team is skilled in modern application architecture, delivering state-of-the-art and secure
+                    software solutions.</p>
+            </div>
+            <div class="benefit">
+                <h3>Comprehensive Data Integration Solutions</h3>
+                <p>Our team specializes in connecting various data sources, streamlining data flow between systems, and
+                    ensuring seamless integration for enhanced business efficiency.</p>
+            </div>
+            <div class="benefit">
+                <h3>Exceptional User Experience Design</h3>
+                <p>We prioritize user experience, creating intuitive and user-friendly interfaces for your applications.
+                </p>
+            </div>
+            <div class="benefit">
+                <h3>Cloud Development and Architecture</h3>
+                <p>Our team excels in designing and implementing cloud-based solutions, ensuring efficient, secure, and
+                    flexible software to support your business growth.</p>
+            </div>
+        </section>
+        <h2>Included Services</h2>
+        <section class="benefits other">
+            <div class="benefit">
+                <h3>Comprehensive Project Management</h3>
+                <p>In addition to software development, we provide project management services to ensure seamless
+                    execution and delivery.</p>
+            </div>
+            <div class="benefit">
+                <h3>Agile Development Process</h3>
+                <p>We follow an Agile development process, allowing for flexibility, collaboration, and continuous
+                    improvement.</p>
+            </div>
+            <div class="benefit">
+                <h3>Quality Assurance and Testing</h3>
+                <p>We conduct thorough testing to guarantee high-quality software, meeting the most stringent standards
+                    for your business.</p>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to get started on your next project? Drop us an email at <a
+                    href="mailto:sales@decknightsoftware.com">sales@decknightsoftware.com</a></p>
+        </section>
     </main>
-
-    <footer>
-        <h3>Contact Us</h3>
-        <div style="margin-left: 1rem;"><a href="mailto:info@decknightsoftware.com">info@decknightsoftware.com</a></div>
-    </footer>
-
 </body>
 
 </html>

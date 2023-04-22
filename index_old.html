@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Decknight Software</title>
+    <link rel="shortcut icon" type="type/x-icon" href="favicon.ico" />
+    <link rel="icon" type="type/x-icon" href="favicon.ico" />
+    <style>
+        :root {
+            --color-bg: #fafafa;
+            --color-fg: #333;
+        }
+
+        body {
+            font-family: monospace;
+            height: 100vh;
+			max-width: 80ch;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            color: var(--color-fg);
+            background-color: var(--color-bg);
+        }
+
+        header {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        main {
+            flex-grow: 1;
+            max-width: 80ch;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 0.5rem;
+        }
+
+        a {
+            color: #345678;
+        }
+
+        .dark {
+            --color-fg: #fafafa;
+            --color-bg: #333;
+        }
+
+        .dark a {
+            color: #6c92b8;
+        }
+
+        h2 {margin-bottom: 0.5rem;}
+    </style>
+
+    <script>
+        function updateDarkMode() {
+            console.log('updating dark mode');
+
+            document.body.classList.remove('dark');
+
+            if (document.getElementById('dark-mode-selector').checked) {
+                document.body.classList.add('dark');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateDarkMode();
+        });
+    </script>
+</head>
+
+<body>
+    
+    <header>
+		<svg version="1.1" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+			<rect fill="#123456" x="0" y="0" width="100%" height="100%" />
+			<text x="32" y="42" text-anchor="middle" style="fill: white; font-size: 23pt; font-family: Consolas, fixed;">{DN}</text>
+		</svg>
+        <h1 style="margin-left: 1rem; flex-grow: 1">Decknight Software</h1>
+        <label for="dark-mode-selector"><input id="dark-mode-selector" type="checkbox" onclick="updateDarkMode();" checked="checked">Dark Mode</label>
+    </header>
+
+    <main>
+        <div style="margin-top: 1.5rem;">
+            <h2>Don't let this plain looking website fool you!</h2>
+            We create our applications with the latest development strategies and patterns, constantly listening for new events in the ecosystem
+            and mediating the right solution for your needs.
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>Web Applications</h2>
+            We specialize in building web applications, but we've done it all. We've build backend systems with no user interface to 3D game models.
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>On-Prem or Cloud</h2>
+            Do you want your applications to be hosted in the cloud? We can do that! Prefer self-hosting? We've done plenty of that!
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>Migrate Data</h2>
+            Need to migrate data from one database to another? Do you have ETL processes you need created or improved? We've got you fully covered.
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <h2>Agility Defined</h2>
+            We cover the entire life-cycle of your development needs, from project kickoff to ongoing support.
+            We prefer to meet with you on a semi-regular basis (weekly or bi-weekly) to show you our progress and ensure
+            your needs are being met.
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contact Us</h3>
+        <div style="margin-left: 1rem;"><a href="mailto:info@decknightsoftware.com">info@decknightsoftware.com</a></div>
+    </footer>
+
+</body>
+
+</html>
